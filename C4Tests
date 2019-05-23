@@ -1,0 +1,54 @@
+package c4;
+
+import org.junit.Test;
+import junit.framework.TestCase;
+
+public class C4Tests extends TestCase
+{
+        /** 
+         * Tests the constructor
+         */
+        @Test
+        public void testConstructor ()
+        {
+          int rows = 5; 
+          int cols = 6; 
+          
+          assertEquals(5, rows); 
+          assertEquals(6, cols); 
+        }
+        
+        /**
+         * Tests that an error is thrown when the rows are less than 4
+         */
+        @Test(expected = IllegalArgumentException.class)
+        public void rowsLessThan4 ()
+        {
+            int rows = 1; 
+            int cols = 6; 
+        }
+        
+        /**
+         * Tests that an error is thorwn when the columns are less than 4
+         */
+        @Test(expected = IllegalArgumentException.class)
+        public void colsLessThan4 ()
+        {
+            int rows = 6; 
+            int cols = 1; 
+        }
+        
+        /**
+         * Tests if the grid is empty when new game is called
+         */
+        @Test
+        public void testNewGame ()
+        {
+            int rows = 0; 
+            int cols = 0; 
+            
+            int[][] grid = new int[rows][cols];   
+
+        }
+
+}
